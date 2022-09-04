@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BaseAppLL</string>
+    <string name="strBtn1">첫번째 버튼</string>
+    <string name="strBtn2">두번째 버튼</string>
+</resources>
