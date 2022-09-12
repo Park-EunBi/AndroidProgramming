@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConverterLinearTwoActivity">
         <activity
+            android:name=".SecondActivity"
+            android:label="Second 엑티비티"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

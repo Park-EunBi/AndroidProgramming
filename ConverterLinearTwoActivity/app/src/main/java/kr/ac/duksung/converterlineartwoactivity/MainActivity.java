@@ -1,7 +1,9 @@
 package kr.ac.duksung.converterlineartwoactivity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     EditText editText;
     Button button;
     TextView textView;
+    // 두번째 화면을 연결할 버튼
+    Button goSecond;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.editText);
         button = (Button) findViewById(R.id.button);
         textView = (TextView) findViewById(R.id.textView);
+        // 두번째 화면 연결
+        goSecond = (Button) findViewById(R.id.btn);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,5 +46,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // 두번째 페이지 연결 (버튼과 리스너 연결)
+        goSecond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),
+                        SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
